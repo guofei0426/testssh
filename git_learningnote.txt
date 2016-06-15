@@ -1,0 +1,83 @@
+配置git
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+创建目录
+$ mkdir 目录名
+切换目录
+$ cd 目录名
+查看目录路径
+$ pwd 
+git初始化
+$ git init
+添加文件到仓库
+$ git add 文件名
+提交文件
+$ git commit -m "描述"
+查看文件状态
+$ git status
+查看修改了什么内容
+$ git diff
+查看提交的日子
+$ git log
+查看简单的消息以及提交的日子信息
+$ git log --pretty=online
+回退到上一个版本
+$ git reset --hard head^
+回退到指定版本如上一个被回退掉的版本
+$ git reset --hard head 版本id（不用写完）
+查看文件内容
+cat 文件名
+查看工作区和版本库里面最新版本的区别
+$ git diff HEAD -- readme.txt
+丢弃工作区的修改
+$ git checkout -- readme.txt
+把暂存区的修改撤销掉（unstage），重新放回工作区
+$ git reset HEAD file名
+删除版本库里面的文件
+$ git rm 文件名
+删除后再检出
+$ git checkout -- test.txt
+检查本机是否有ssh key设置
+$ cd ~/.ssh 或cd .ssh
+创建SSH Key
+$ cd ~  #保证当前路径在”~”下
+$ ssh-keygen -t rsa -C "xxxxxx@yy.com"  #建议填写自己真实有效的邮箱地址
+
+检出是否配置成功
+$ ssh -T git@github.com
+关联远程库
+$ git remote add origin git@github.com:guof0426/guof
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
