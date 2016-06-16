@@ -91,12 +91,45 @@ $git stash apply
 $ git stash drop
 删除同时恢复stash的内容
 git stash pop
+多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：
+$ git stash apply stash@{0}
+强行删除分支并且分支未提交（git branch -D <name>强行删除。）
+$ git branch -D 分支名
+
+多人协作
+查看远程库的名称
+$git remote
+查看远程库的详细信息
+$git remote -v
+推送分支多远程库
+$ git push origin dev
+创建远程origin的dev分支到本地
+$ git checkout -b dev origin/dev
+用git pull把最新的提交从origin/dev抓下来
+$ git pull
+git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接
+$ git branch --set-upstream dev origin/dev
 
 
+敲命令git tag <name>就可以打一个新标签
+$ git tag v1.0
+对add merge这次提交打标签，它对应的commit id是6224937，敲入命令
+$ git tag v0.9 6224937
+命令git tag可以查看所有标签
+$ git tag
+删除标签
+$ git tag -d v0.1
+推送标签
+git push origin <tagname>
+推送所有标签
+$ git push origin --tags
+删除远程标签
+$ git push origin :refs/tags/v0.9
 
 
-
- 
+自定义git
+Git显示颜色，会让命令输出看起来更醒目：
+$ git config --global color.ui true
 
 
 
