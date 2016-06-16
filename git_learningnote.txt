@@ -131,6 +131,16 @@ $ git push origin :refs/tags/v0.9
 Git显示颜色，会让命令输出看起来更醒目：
 $ git config --global color.ui true
 
+忽略文件
+创建一个.gitignore文件
+确实想添加该文件，可以用-f强制添加到Git
+$ git add -f App.class
+规则写错了，可以用git check-ignore命令检查
+$ git check-ignore -v App.class
+
+配置别名
+敲git st就表示git status那就简单多了，当然这种偷懒的办法我们是极力赞成的。
+$ git config --global alias.st status
 
 
 
