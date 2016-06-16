@@ -50,11 +50,47 @@ $ git remote add origin https://github.com/guofei0426/testssh.git
 $ git remote add origin git@github.com:michaelliao/learngit.git
 推送到远程
 $ git push -u origin master
+克隆git库
+$ git clone git@github.com:michaelliao/gitskills.git
+$ git clone https://github.com/guofei0426/guof.git
 
-adb
 
+git分支和合并
 
+创建并切换
+$ git checkout -b dev
+（git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+$ git branch dev
+$ git checkout dev）
+创建分支
+$ git branch dev
+切换分支
+$ git checkout dev
+查看当前分支
+$ git branch
+合并
+$ git merge dev
+删除分支
+$ git branch -d dev
+(查看冲突)
+$ git status
+命令可以看到分支合并图
+$  git log --graph
+关闭Fast forward模式合并
+git merge --no-ff -m "关闭快速合并模式" dev
+查看历史分支日子
+$ git log --graph --pretty=oneline --abbrev-commit
 
+当前工作现场“储藏”起来
+$ git stash
+查看工作现场
+$ git stash list
+恢复隐藏工作现场
+$git stash apply
+删除stash内容
+$ git stash drop
+删除同时恢复stash的内容
+git stash pop
 
 
 
